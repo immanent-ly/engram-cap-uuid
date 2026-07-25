@@ -1,0 +1,18 @@
+package engram:cap-uuid@1.0.0;
+
+/// The uuid capability. A plugin component exports exactly one `provider`
+/// interface named `engram:cap-<name>/provider@<version>`; the runner links its
+/// functions as dynamic host functions and journals every call.
+interface provider {
+    /// A fresh random (version 4) UUID, lowercase hyphenated form.
+    v4: func() -> string;
+}
+
+/// The plugin world: import only the allowlisted WASI interfaces the
+/// capability needs, export the provider. The WASI version is 0.2.6, the
+/// version bundled by wasmtime-wasi 45; the runner allowlist accepts any
+/// 0.2.x patch.
+world plugin {
+    import wasi:random/random@0.2.6;
+    export provider;
+}
