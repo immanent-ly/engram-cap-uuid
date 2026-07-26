@@ -1,4 +1,4 @@
-package engram:cap-uuid@1.0.0;
+package engram:cap-uuid@0.1.0;
 
 /// The uuid capability. A plugin component exports exactly one `provider`
 /// interface named `engram:cap-<name>/provider@<version>`; the runner links its

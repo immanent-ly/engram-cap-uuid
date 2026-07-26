@@ -1,6 +1,7 @@
 # engram-cap-uuid
 
 Official engram capability `uuid`. Provides the guest with fresh random UUIDs.
+
 Published through the [engram-capabilities](https://github.com/immanent-ly/engram-capabilities) registry.
 
 ## Interface

@@ -128,19 +128,19 @@ pub mod exports {
                     fn v4() -> _rt::String;
                 }
                 #[doc(hidden)]
-                macro_rules! __export_engram_cap_uuid_provider_1_0_0_cabi {
+                macro_rules! __export_engram_cap_uuid_provider_0_1_0_cabi {
                     ($ty:ident with_types_in $($path_to_types:tt)*) => {
                         const _ : () = { #[unsafe (export_name =
-                        "engram:cap-uuid/provider@1.0.0#v4")] unsafe extern "C" fn
+                        "engram:cap-uuid/provider@0.1.0#v4")] unsafe extern "C" fn
                         export_v4() -> * mut u8 { unsafe { $($path_to_types)*::
                         _export_v4_cabi::<$ty > () } } #[unsafe (export_name =
-                        "cabi_post_engram:cap-uuid/provider@1.0.0#v4")] unsafe extern "C"
+                        "cabi_post_engram:cap-uuid/provider@0.1.0#v4")] unsafe extern "C"
                         fn _post_return_v4(arg0 : * mut u8,) { unsafe {
                         $($path_to_types)*:: __post_return_v4::<$ty > (arg0) } } };
                     };
                 }
                 #[doc(hidden)]
-                pub(crate) use __export_engram_cap_uuid_provider_1_0_0_cabi;
+                pub(crate) use __export_engram_cap_uuid_provider_0_1_0_cabi;
                 #[cfg_attr(target_pointer_width = "64", repr(align(8)))]
                 #[cfg_attr(target_pointer_width = "32", repr(align(4)))]
                 struct _RetArea(
@@ -222,7 +222,7 @@ macro_rules! __export_plugin_impl {
     };
     ($ty:ident with_types_in $($path_to_types_root:tt)*) => {
         $($path_to_types_root)*::
-        exports::engram::cap_uuid::provider::__export_engram_cap_uuid_provider_1_0_0_cabi!($ty
+        exports::engram::cap_uuid::provider::__export_engram_cap_uuid_provider_0_1_0_cabi!($ty
         with_types_in $($path_to_types_root)*:: exports::engram::cap_uuid::provider);
     };
 }
@@ -230,7 +230,7 @@ macro_rules! __export_plugin_impl {
 pub(crate) use __export_plugin_impl as export;
 #[cfg(target_arch = "wasm32")]
 #[unsafe(
-    link_section = "component-type:wit-bindgen:0.41.0:engram:cap-uuid@1.0.0:plugin:encoded world"
+    link_section = "component-type:wit-bindgen:0.41.0:engram:cap-uuid@0.1.0:plugin:encoded world"
 )]
 #[doc(hidden)]
 #[allow(clippy::octal_escapes)]
@@ -238,8 +238,8 @@ pub static __WIT_BINDGEN_COMPONENT_TYPE: [u8; 304] = *b"\
 \0asm\x0d\0\x01\0\0\x19\x16wit-component-encoding\x04\0\x07\xb3\x01\x01A\x02\x01\
 A\x04\x01B\x05\x01p}\x01@\x01\x03lenw\0\0\x04\0\x10get-random-bytes\x01\x01\x01@\
 \0\0w\x04\0\x0eget-random-u64\x01\x02\x03\0\x18wasi:random/random@0.2.6\x05\0\x01\
-B\x02\x01@\0\0s\x04\0\x02v4\x01\0\x04\0\x1eengram:cap-uuid/provider@1.0.0\x05\x01\
-\x04\0\x1cengram:cap-uuid/plugin@1.0.0\x04\0\x0b\x0c\x01\0\x06plugin\x03\0\0\0G\x09\
+B\x02\x01@\0\0s\x04\0\x02v4\x01\0\x04\0\x1eengram:cap-uuid/provider@0.1.0\x05\x01\
+\x04\0\x1cengram:cap-uuid/plugin@0.1.0\x04\0\x0b\x0c\x01\0\x06plugin\x03\0\0\0G\x09\
 producers\x01\x0cprocessed-by\x02\x0dwit-component\x070.227.1\x10wit-bindgen-rus\
 t\x060.41.0";
 #[inline(never)]
